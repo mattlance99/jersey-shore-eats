@@ -1,14 +1,27 @@
-import React from "react";
+import React, { Component } from "react";
+import Shore from "./shore.jpg";
+import Home from "./components/Home";
 import "./App.css";
+import {
+  BrowserRouter as Router,
+  Route,
+  NavLink,
+  Switch
+} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <p>
-        <h2>Jersey Shore Eats</h2>
-      </p>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Router>
+          <React.Fragment>
+            <Switch>
+              <Route exact path="/" component={Home} />
+            </Switch>
+          </React.Fragment>
+        </Router>
+      </div>
+    );
+  }
 }
-
 export default App;
