@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Shore from "./shore.jpg";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import About from "./components/About";
 import "./App.css";
 import {
   BrowserRouter as Router,
@@ -19,6 +20,7 @@ class App extends Component {
           <React.Fragment>
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/about" component={About} />
             </Switch>
           </React.Fragment>
         </Router>
